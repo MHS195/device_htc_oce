@@ -1,0 +1,9 @@
+qmux_socket(thermal-engine)
+allow thermal-engine hidl_base_hwservice:hwservice_manager add; 
+allow thermal-engine hwservicemanager:binder { call transfer };
+allow thermal-engine hwservicemanager_prop:file r_file_perms;
+allow thermal-engine sysfs_rmtfs:dir r_dir_perms;
+# reboot/shutdown for thermal limits exceeded
+set_prop(thermal-engine, powerctl_prop)
+# IThermal Thermal HAL
+hal_server_domain(thermal-engine, hal_thermal)

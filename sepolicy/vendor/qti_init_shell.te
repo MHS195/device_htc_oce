@@ -1,0 +1,13 @@
+allow qti_init_shell debug_prop:property_service set;
+allow qti_init_shell post_boot_prop:property_service set;
+allow qti_init_shell sf_lcd_density_prop:property_service set;
+allow qti_init_shell system_prop:property_service set;
+allow qti_init_shell vendor_default_prop:property_service set;
+allow qti_init_shell vendor_radio_data_file:dir { rw_dir_perms create_dir_perms };
+allow qti_init_shell vendor_radio_data_file:file { rw_file_perms create_file_perms };
+allow qti_init_shell radio_data_file:file rw_file_perms;
+allow qti_init_shell sysfs:file setattr;
+allow qti_init_shell fingerprint_prop:property_service set;
+
+# dont tell me..
+allow qti_init_shell self:capability dac_override;

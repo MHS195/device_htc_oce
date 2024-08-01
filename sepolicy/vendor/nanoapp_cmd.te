@@ -1,0 +1,12 @@
+type nanoapp_cmd, domain;
+type nanoapp_cmd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(nanoapp_cmd) 
+
+allow nanoapp_cmd sysfs_nanoapp_cmd:dir r_dir_perms;
+allow nanoapp_cmd sysfs_nanoapp_cmd:file rw_file_perms;
+
+# dont tell me..
+allow nanoapp_cmd self:capability dac_override;
+
+allow nanoapp_cmd vfat:dir r_dir_perms;

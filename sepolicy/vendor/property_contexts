@@ -1,0 +1,8 @@
+ro.sf.lcd_density                   u:object_r:sf_lcd_density_prop:s0
+ro.gpu.available_frequencies        u:object_r:freq_prop:s0
+persist.mmi.misc_dev_path           u:object_r:post_boot_prop:s0
+mfg.calibration.status              u:object_r:sensors_prop:s0
+persist.camera.                     u:object_r:camera_prop:s0
+htc.camera.                         u:object_r:camera_prop:s0
+persist.net.doxlat                  u:object_r:vendor_xlat_prop:s0
+ro.hardware.fingerprint             u:object_r:fingerprint_prop:s0

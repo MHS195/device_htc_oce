@@ -1,0 +1,5 @@
+allow system_server thermal-engine:binder call; 
+allow system_server mm-qcamerad:binder call;
+allow system_server adb_data_file:dir r_dir_perms;
+allow system_server adb_data_file:file r_file_perms;
+allow system_server sdcardfs:file r_file_perms;

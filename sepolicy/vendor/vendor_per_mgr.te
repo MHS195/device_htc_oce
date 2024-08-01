@@ -1,0 +1,4 @@
+allow vendor_per_mgr vfat:file r_file_perms; 
+allow vendor_per_mgr self:capability net_raw;
+allow vendor_per_mgr vfat:dir r_dir_perms;
+allow vendor_per_mgr block_device:dir r_dir_perms;

@@ -1,0 +1,7 @@
+allow init sysfs:file setattr;
+allow init vendor_configs_file:file mounton;
+allow init vendor_radio_data_file:dir mounton;
+allow init system_file:dir relabelfrom;
+allow init system_file:file relabelfrom;
+allow init vendor_configs_file:dir relabelfrom;
+allow init vendor_file:dir relabelfrom;

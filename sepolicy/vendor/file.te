@@ -1,0 +1,5 @@
+type sysfs_fpc, sysfs_type, fs_type;
+type sysfs_rmtfs, sysfs_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_nanoapp_cmd, sysfs_type, fs_type;
+type nanohub_lock_file, file_type, data_file_type;

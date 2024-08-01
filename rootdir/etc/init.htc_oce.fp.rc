@@ -1,0 +1,7 @@
+on early-boot
+	exec /vendor/bin/sh /vendor/bin/init.htc.fp.sh
+
+	# For MFG socket
+	mkdir /data/fpc 0770 system system
+	mkdir /data/idex 0770 system system
+
