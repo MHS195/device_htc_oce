@@ -62,7 +62,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 # BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/htc/msm8996
+TARGET_KERNEL_SOURCE := kernel/htc/oce
 TARGET_KERNEL_CONFIG := maru_defconfig
 
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware crashdump.d firmware persist
