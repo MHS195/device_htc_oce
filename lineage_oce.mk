@@ -24,11 +24,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Include Maru stuff
+$(call inherit-product, vendor/maruos/device-maru.mk)
+$(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := oce
 PRODUCT_NAME := lineage_oce
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := U Ultra
+PRODUCT_MODEL := MaruOS HTC U Ultra
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_RELEASE_NAME := oce
 
