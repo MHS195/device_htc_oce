@@ -133,7 +133,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile" | "talos")
+	              "msmnile" | "talos" | "trinket")
 			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
 		      ;;
 	              *)
@@ -161,7 +161,14 @@ if [ "$target" == "msm8937" ]; then
 	   esac
 	fi
 fi
-
+if [ "$target" == "msm8996" ]; then
+       if [ -d /config/usb_gadget ]; then
+                  setprop vendor.usb.rndis.func.name "rndis_bam"
+                  setprop vendor.usb.rmnet.func.name "rmnet_bam"
+                  setprop vendor.usb.rmnet.inst.name "rmnet"
+                  setprop vendor.usb.dpl.inst.name "dpl"
+       fi
+fi
 # set device mode notification to USB driver for SA8150 Auto ADP
 product=`getprop ro.build.product`
 
