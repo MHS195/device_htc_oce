@@ -178,7 +178,7 @@ USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_INIT_VENDOR_LIB := libinit_oce
-TARGET_RECOVERY_DEVICE_MODULES := device/htc/oce/init
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oce
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -215,10 +215,10 @@ TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-
+SELINUX_IGNORE_NEVERALLOWS := true
 # SHIMS
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/libril.so|/system/vendor/lib64/libshim_ril.so \
