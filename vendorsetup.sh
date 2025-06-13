@@ -1,1 +1,1 @@
-add_lunch_combo maru_oce-userdebug
+add_lunch_combo lineage_oce-userdebug

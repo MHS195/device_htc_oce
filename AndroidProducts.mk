@@ -14,5 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_oce.mk \
-    $(LOCAL_DIR)/maru_oce.mk
+    $(LOCAL_DIR)/lineage_oce.mk

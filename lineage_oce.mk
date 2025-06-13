@@ -18,25 +18,26 @@
 $(call inherit-product, device/htc/oce/device.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 
 # Inherit some common RR stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Include Maru stuff
-$(call inherit-product, vendor/maruos/device-maru.mk)
-$(call inherit-product, vendor/maruos/BoardConfigVendor.mk)
+#$(call inherit-product, vendor/maruos/device-maru.mk)
+$(call inherit-product, vendor/htc/oce/oce-vendor.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := oce
 PRODUCT_NAME := lineage_oce
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := MaruOS HTC U Ultra
+PRODUCT_MODEL := Halium HTC U Ultra
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_RELEASE_NAME := oce
 
-$(call inherit-product-if-exists, vendor/htc/oce/oce-vendor.mk)
+#$(call inherit-product-if-exists, vendor/htc/oce/oce-vendor.mk)
 
 # Device Fingerprint
 BUILD_FINGERPRINT := htc/ocedugl_00400/htc_ocedugl:8.0.0/OPR1.170623.032/1026541.1:user/release-keys
