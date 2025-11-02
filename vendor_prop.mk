@@ -125,7 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fast charge
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.hvdcp.allow_opti=1 \
+    persist.hvdcp.allow_opti=0 \
     ro.cutoff_voltage_mv=3050
 
 # Media
@@ -160,15 +160,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 # Priv-app permissions whitelist
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=enforce
+ PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=disable
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     persist.data.qmi.adb_logmask=0 \
-    rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
-    rild.vendor.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
+    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    rild.vendor.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.baseband.arch=msm \
     ro.telephony.call_ring.multiple=false \
     ro.ril.telephony.mqanelements=5 \

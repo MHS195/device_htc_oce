@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/htc/oce/oce-vendor.mk)
@@ -217,8 +217,8 @@ PRODUCT_PACKAGES += \
     libtinyxml
 
 # Doze
-PRODUCT_PACKAGES += \
-    HTCDoze
+#PRODUCT_PACKAGES += \
+#    HTCDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -235,8 +235,8 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
 
 # FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
+#PRODUCT_PACKAGES += \
+#    FlipFlap
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -298,9 +298,11 @@ PRODUCT_PACKAGES += \
     loggy.sh \
     init.usbdiag.sh \
     init.foreground.sh \
-    init.recovery.qcom.rc \
+    init.disabled.rc \
+    init.halium.rc \
     init.target.rc \
     ueventd.qcom.rc
+#    init.recovery.qcom.rc 
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -335,12 +337,12 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oce
 
 # Lineage hardware
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.trust@1.0-service
 
 # LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@1.0-service-sdm
 
 # Marlin IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
@@ -407,8 +409,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Prebuilts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/prebuilt/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -465,11 +467,11 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager.xml \
     com.android.ims.rcsmanager \
     ims-ext-common \
-    telephony-ext \
+#    telephony-ext 
     libshim_ims
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += 
+#    telephony-ext
     
 PRODUCT_SOONG_NAMESPACES += \
     device/htc/oce
@@ -500,7 +502,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package
+    vndk_package \
+    libstdc++.vendor
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
