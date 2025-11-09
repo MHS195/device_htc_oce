@@ -302,7 +302,6 @@ PRODUCT_PACKAGES += \
     init.halium.rc \
     init.target.rc \
     ueventd.qcom.rc
-#    init.recovery.qcom.rc 
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -467,7 +466,6 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager.xml \
     com.android.ims.rcsmanager \
     ims-ext-common \
-#    telephony-ext 
     libshim_ims
 
 #PRODUCT_BOOT_JARS += 
